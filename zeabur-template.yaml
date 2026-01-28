@@ -55,7 +55,7 @@ spec:
       - **Heavy usage**: 2 vCPU, 2 GB RAM
 
       ## Documentation
-      - GitHub: https://github.com/zeabur/moltbot-sandbox-browser
+      - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
 
     services:
       - name: moltbot-browser
@@ -63,7 +63,7 @@ spec:
         template: PREBUILT
         spec:
           source:
-            image: ghcr.io/zeabur/moltbot-sandbox-browser:main
+            image: ghcr.io/canyugs/moltbot-sandbox-browser:main
           ports:
           - id: cdp
             port: 9222
