@@ -225,3 +225,195 @@ localization:
       ## 文档
       - moltbot 浏览器工具：https://docs.molt.bot/tools/browser
       - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
+
+  ja:
+    name: moltbot ブラウザサンドボックス
+    description: |
+      Chrome DevTools Protocol (CDP) で制御可能なヘッドレス Chromium ブラウザサンドボックス。moltbot やブラウザ自動化が必要な他のサービスと組み合わせて使用できます。
+    readme: |
+      # moltbot ブラウザサンドボックス
+      Chrome DevTools Protocol (CDP) で制御可能なヘッドレス Chromium ブラウザ。
+
+      ## ユースケース
+      - moltbot でのブラウザ自動化
+      - ウェブスクレイピング
+      - 自動テスト
+      - スクリーンショットサービス
+
+      ## 接続方法
+      同じ Zeabur プロジェクト内の他のサービスから以下で接続できます：
+      ```
+      http://moltbot-sandbox-browser:9222
+      ```
+
+      ## CDP エンドポイント
+      - `GET /json/version` - ブラウザバージョン情報
+      - `GET /json/list` - 開いているタブの一覧
+      - `GET /json/new?url=<url>` - 新しいタブを開く
+      - DevTools プロトコル用 WebSocket 接続
+
+      ## moltbot 設定
+
+      **方法1：設定ファイル** - `clawdbot.json` に追加：
+      ```json
+      {
+        "browser": {
+          "enabled": true,
+          "attachOnly": true,
+          "defaultProfile": "clawd",
+          "profiles": {
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#FF4500"
+            }
+          }
+        }
+      }
+      ```
+
+      **方法2：CLI コマンド**：
+      ```bash
+      moltbot browser create-profile --name clawd --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+      ```
+
+      ## リソース要件
+      - **推奨構成**：1 vCPU、1 GB RAM
+      - **高負荷使用**：2 vCPU、2 GB RAM
+
+      ## 無視できるエラー
+      以下のログエラーメッセージは正常であり、安全に無視できます：
+      - `Failed to connect to the bus` - コンテナ内に D-Bus がない（想定通り）
+      - `Failed to adjust OOM score` - 権限の制限（機能に影響なし）
+      - `DEPRECATED_ENDPOINT` - ヘッドレスモードでは Google Cloud Messaging 不要
+
+      ## ドキュメント
+      - moltbot ブラウザツール：https://docs.molt.bot/tools/browser
+      - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
+
+  id:
+    name: moltbot Browser Sandbox
+    description: |
+      Sandbox browser Chromium headless yang dapat dikontrol melalui Chrome DevTools Protocol (CDP). Gunakan dengan moltbot atau layanan lain yang membutuhkan kemampuan otomatisasi browser.
+    readme: |
+      # moltbot Browser Sandbox
+      Browser Chromium headless yang dapat dikontrol melalui Chrome DevTools Protocol (CDP).
+
+      ## Kasus Penggunaan
+      - Otomatisasi browser dengan moltbot
+      - Web scraping
+      - Pengujian otomatis
+      - Layanan screenshot
+
+      ## Cara Menghubungkan
+      Layanan lain dalam proyek Zeabur yang sama dapat terhubung melalui:
+      ```
+      http://moltbot-sandbox-browser:9222
+      ```
+
+      ## Endpoint CDP
+      - `GET /json/version` - Info versi browser
+      - `GET /json/list` - Daftar tab yang terbuka
+      - `GET /json/new?url=<url>` - Buka tab baru
+      - Koneksi WebSocket untuk protokol DevTools
+
+      ## Konfigurasi untuk moltbot
+
+      **Opsi 1: File konfigurasi** - Tambahkan ke `clawdbot.json`:
+      ```json
+      {
+        "browser": {
+          "enabled": true,
+          "attachOnly": true,
+          "defaultProfile": "clawd",
+          "profiles": {
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#FF4500"
+            }
+          }
+        }
+      }
+      ```
+
+      **Opsi 2: Perintah CLI**:
+      ```bash
+      moltbot browser create-profile --name clawd --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+      ```
+
+      ## Kebutuhan Sumber Daya
+      - **Rekomendasi**: 1 vCPU, 1 GB RAM
+      - **Penggunaan berat**: 2 vCPU, 2 GB RAM
+
+      ## Error yang Dapat Diabaikan
+      Pesan error berikut di log adalah normal dan dapat diabaikan dengan aman:
+      - `Failed to connect to the bus` - Tidak ada D-Bus di container (normal)
+      - `Failed to adjust OOM score` - Batasan izin (tidak mempengaruhi fungsi)
+      - `DEPRECATED_ENDPOINT` - Google Cloud Messaging tidak diperlukan untuk mode headless
+
+      ## Dokumentasi
+      - moltbot Browser Tool: https://docs.molt.bot/tools/browser
+      - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
+
+  es:
+    name: moltbot Browser Sandbox
+    description: |
+      Sandbox de navegador Chromium headless que puede ser controlado a través del Chrome DevTools Protocol (CDP). Úsalo con moltbot u otros servicios que necesiten capacidades de automatización de navegador.
+    readme: |
+      # moltbot Browser Sandbox
+      Navegador Chromium headless que puede ser controlado a través del Chrome DevTools Protocol (CDP).
+
+      ## Casos de Uso
+      - Automatización de navegador con moltbot
+      - Web scraping
+      - Pruebas automatizadas
+      - Servicios de captura de pantalla
+
+      ## Cómo Conectar
+      Otros servicios en el mismo proyecto de Zeabur pueden conectarse a través de:
+      ```
+      http://moltbot-sandbox-browser:9222
+      ```
+
+      ## Endpoints CDP
+      - `GET /json/version` - Información de versión del navegador
+      - `GET /json/list` - Listar pestañas abiertas
+      - `GET /json/new?url=<url>` - Abrir nueva pestaña
+      - Conexiones WebSocket para el protocolo DevTools
+
+      ## Configuración para moltbot
+
+      **Opción 1: Archivo de configuración** - Agregar a `clawdbot.json`:
+      ```json
+      {
+        "browser": {
+          "enabled": true,
+          "attachOnly": true,
+          "defaultProfile": "clawd",
+          "profiles": {
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#FF4500"
+            }
+          }
+        }
+      }
+      ```
+
+      **Opción 2: Comando CLI**:
+      ```bash
+      moltbot browser create-profile --name clawd --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+      ```
+
+      ## Recursos
+      - **Recomendado**: 1 vCPU, 1 GB RAM
+      - **Uso intensivo**: 2 vCPU, 2 GB RAM
+
+      ## Errores Ignorables
+      Los siguientes mensajes de error en los logs son normales y pueden ignorarse de forma segura:
+      - `Failed to connect to the bus` - No hay D-Bus en el contenedor (esperado)
+      - `Failed to adjust OOM score` - Limitación de permisos (no afecta la funcionalidad)
+      - `DEPRECATED_ENDPOINT` - Google Cloud Messaging no es necesario para el modo headless
+
+      ## Documentación
+      - moltbot Browser Tool: https://docs.molt.bot/tools/browser
+      - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
