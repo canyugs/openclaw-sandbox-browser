@@ -8,10 +8,10 @@ This container provides a headless Chromium browser that moltbot can control via
 
 ```bash
 # Pull the image
-docker pull ghcr.io/moltbot/moltbot-sandbox-browser:main
+docker pull ghcr.io/zeabur/moltbot-sandbox-browser:main
 
 # Run in headless mode
-docker run -d -p 9222:9222 ghcr.io/moltbot/moltbot-sandbox-browser:main
+docker run -d -p 9222:9222 ghcr.io/zeabur/moltbot-sandbox-browser:main
 
 # Test CDP is working
 curl http://localhost:9222/json/version

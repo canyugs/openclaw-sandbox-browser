@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim
 
-LABEL org.opencontainers.image.source="https://github.com/moltbot/moltbot-sandbox-browser"
+LABEL org.opencontainers.image.source="https://github.com/zeabur/moltbot-sandbox-browser"
 LABEL org.opencontainers.image.description="Headless Chromium browser sandbox for moltbot"
 LABEL org.opencontainers.image.licenses="MIT"
 
