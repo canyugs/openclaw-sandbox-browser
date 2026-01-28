@@ -57,12 +57,18 @@ spec:
       }
       ```
 
-      **Option 2: CLI command**:
+      **Option 2: CLI commands**:
       ```bash
+      # Create the browser profile
       moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+
+      # Enable browser and set default profile
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.defaultProfile sandbox
       ```
 
-      > Note: The default profile `clawd` is for local browser. Use `sandbox` for the remote browser sandbox.
+      > Note: Restart the gateway after configuration changes.
 
       ## Resources
       - **Recommended**: 1 vCPU, 1 GB RAM
@@ -147,10 +153,16 @@ localization:
 
       **方式二：CLI 命令**：
       ```bash
+      # 建立瀏覽器 profile
       moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+
+      # 啟用瀏覽器並設定預設 profile
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.defaultProfile sandbox
       ```
 
-      > 注意：預設的 `clawd` profile 是本地瀏覽器。使用 `sandbox` 來連接遠端瀏覽器沙盒。
+      > 注意：設定變更後需重新啟動 gateway。
 
       ## 資源需求
       - **建議配置**：1 vCPU、1 GB RAM
@@ -213,10 +225,16 @@ localization:
 
       **方式二：CLI 命令**：
       ```bash
+      # 创建浏览器 profile
       moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+
+      # 启用浏览器并设置默认 profile
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.defaultProfile sandbox
       ```
 
-      > 注意：默认的 `clawd` profile 是本地浏览器。使用 `sandbox` 来连接远端浏览器沙盒。
+      > 注意：配置变更后需重新启动 gateway。
 
       ## 资源需求
       - **建议配置**：1 vCPU、1 GB RAM
@@ -279,10 +297,16 @@ localization:
 
       **方法2：CLI コマンド**：
       ```bash
+      # ブラウザプロファイルを作成
       moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+
+      # ブラウザを有効にしてデフォルトプロファイルを設定
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.defaultProfile sandbox
       ```
 
-      > 注意：デフォルトの `clawd` プロファイルはローカルブラウザ用です。リモートブラウザサンドボックスには `sandbox` を使用してください。
+      > 注意：設定変更後は gateway を再起動してください。
 
       ## リソース要件
       - **推奨構成**：1 vCPU、1 GB RAM
@@ -345,10 +369,16 @@ localization:
 
       **Opsi 2: Perintah CLI**:
       ```bash
+      # Buat profil browser
       moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+
+      # Aktifkan browser dan atur profil default
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.defaultProfile sandbox
       ```
 
-      > Catatan: Profil default `clawd` adalah untuk browser lokal. Gunakan `sandbox` untuk browser sandbox remote.
+      > Catatan: Restart gateway setelah perubahan konfigurasi.
 
       ## Kebutuhan Sumber Daya
       - **Rekomendasi**: 1 vCPU, 1 GB RAM
@@ -409,12 +439,18 @@ localization:
       }
       ```
 
-      **Opción 2: Comando CLI**:
+      **Opción 2: Comandos CLI**:
       ```bash
+      # Crear perfil de navegador
       moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+
+      # Habilitar navegador y establecer perfil predeterminado
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.defaultProfile sandbox
       ```
 
-      > Nota: El perfil predeterminado `clawd` es para el navegador local. Use `sandbox` para el sandbox de navegador remoto.
+      > Nota: Reinicie el gateway después de los cambios de configuración.
 
       ## Recursos
       - **Recomendado**: 1 vCPU, 1 GB RAM
