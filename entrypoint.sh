@@ -7,15 +7,9 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 
 CDP_PORT="${CLAWDBOT_BROWSER_CDP_PORT:-9222}"
 HEADLESS="${CLAWDBOT_BROWSER_HEADLESS:-1}"
+CHROME_CDP_PORT=9223  # Internal port, nginx proxies from CDP_PORT
 
 mkdir -p "${HOME}/.chrome" "${XDG_CONFIG_HOME}" "${XDG_CACHE_HOME}"
-
-# Calculate internal Chrome port (different from exposed port for socat proxy)
-if [[ "${CDP_PORT}" -ge 65535 ]]; then
-  CHROME_CDP_PORT="$((CDP_PORT - 1))"
-else
-  CHROME_CDP_PORT="$((CDP_PORT + 1))"
-fi
 
 CHROME_ARGS=(
   "--remote-debugging-address=127.0.0.1"
@@ -54,11 +48,9 @@ for _ in $(seq 1 50); do
   sleep 0.1
 done
 
-# Start socat to proxy CDP port to all interfaces
-echo "Starting CDP proxy on 0.0.0.0:${CDP_PORT}..."
-socat \
-  TCP-LISTEN:"${CDP_PORT}",fork,reuseaddr,bind=0.0.0.0 \
-  TCP:127.0.0.1:"${CHROME_CDP_PORT}" &
+# Start nginx to proxy CDP with Host header rewrite
+echo "Starting nginx CDP proxy on 0.0.0.0:${CDP_PORT}..."
+nginx -g 'daemon off;' &
 
 echo "moltbot-sandbox-browser is ready. CDP available at port ${CDP_PORT}"
 
