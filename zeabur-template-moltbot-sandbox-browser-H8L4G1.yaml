@@ -39,7 +39,8 @@ spec:
       - WebSocket connections for DevTools protocol
 
       ## Configuration for moltbot
-      Add to your moltbot config (`clawdbot.json`):
+
+      **Option 1: Config file** - Add to `clawdbot.json`:
       ```json
       {
         "browser": {
@@ -56,9 +57,20 @@ spec:
       }
       ```
 
+      **Option 2: CLI command**:
+      ```bash
+      moltbot browser create-profile --name clawd --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+      ```
+
       ## Resources
       - **Recommended**: 1 vCPU, 1 GB RAM
       - **Heavy usage**: 2 vCPU, 2 GB RAM
+
+      ## Ignorable Errors
+      The following error messages in logs are normal and can be safely ignored:
+      - `Failed to connect to the bus` - No D-Bus in container (expected)
+      - `Failed to adjust OOM score` - Permission limitation (doesn't affect functionality)
+      - `DEPRECATED_ENDPOINT` - Google Cloud Messaging not needed for headless mode
 
       ## Documentation
       - moltbot Browser Tool: https://docs.molt.bot/tools/browser
@@ -113,7 +125,8 @@ localization:
       - WebSocket 連線用於 DevTools 協議
 
       ## moltbot 設定
-      在 moltbot 設定檔 (`clawdbot.json`) 中加入：
+
+      **方式一：設定檔** - 在 `clawdbot.json` 中加入：
       ```json
       {
         "browser": {
@@ -130,9 +143,20 @@ localization:
       }
       ```
 
+      **方式二：CLI 命令**：
+      ```bash
+      moltbot browser create-profile --name clawd --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+      ```
+
       ## 資源需求
       - **建議配置**：1 vCPU、1 GB RAM
       - **大量使用**：2 vCPU、2 GB RAM
+
+      ## 可忽略的錯誤
+      以下日誌中的錯誤訊息是正常的，可以安全忽略：
+      - `Failed to connect to the bus` - 容器內沒有 D-Bus（正常現象）
+      - `Failed to adjust OOM score` - 權限限制（不影響功能）
+      - `DEPRECATED_ENDPOINT` - 無頭模式不需要 Google Cloud Messaging
 
       ## 文件
       - moltbot 瀏覽器工具：https://docs.molt.bot/tools/browser
@@ -165,7 +189,8 @@ localization:
       - WebSocket 连接用于 DevTools 协议
 
       ## moltbot 配置
-      在 moltbot 配置文件 (`clawdbot.json`) 中添加：
+
+      **方式一：配置文件** - 在 `clawdbot.json` 中添加：
       ```json
       {
         "browser": {
@@ -182,9 +207,20 @@ localization:
       }
       ```
 
+      **方式二：CLI 命令**：
+      ```bash
+      moltbot browser create-profile --name clawd --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
+      ```
+
       ## 资源需求
       - **建议配置**：1 vCPU、1 GB RAM
       - **大量使用**：2 vCPU、2 GB RAM
+
+      ## 可忽略的错误
+      以下日志中的错误信息是正常的，可以安全忽略：
+      - `Failed to connect to the bus` - 容器内没有 D-Bus（正常现象）
+      - `Failed to adjust OOM score` - 权限限制（不影响功能）
+      - `DEPRECATED_ENDPOINT` - 无头模式不需要 Google Cloud Messaging
 
       ## 文档
       - moltbot 浏览器工具：https://docs.molt.bot/tools/browser
