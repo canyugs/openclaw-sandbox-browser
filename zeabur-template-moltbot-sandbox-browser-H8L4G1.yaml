@@ -40,35 +40,29 @@ spec:
 
       ## Configuration for moltbot
 
-      **Option 1: Config file** - Add to `clawdbot.json`:
+      **Option 1: CLI commands** (via Zeabur Command):
+      ```bash
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
+      ```
+
+      **Option 2: Edit config file** - Add to `clawdbot.json`:
       ```json
       {
         "browser": {
           "enabled": true,
           "attachOnly": true,
-          "defaultProfile": "sandbox",
           "profiles": {
-            "sandbox": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222",
-              "color": "#FF4500"
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222"
             }
           }
         }
       }
       ```
 
-      **Option 2: CLI commands**:
-      ```bash
-      # Create the browser profile
-      moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
-
-      # Enable browser and set default profile
-      moltbot config set browser.enabled true
-      moltbot config set browser.attachOnly true
-      moltbot config set browser.defaultProfile sandbox
-      ```
-
-      > Note: Restart the gateway after configuration changes.
+      Restart the gateway to apply changes.
 
       ## Resources
       - **Recommended**: 1 vCPU, 1 GB RAM
@@ -134,35 +128,29 @@ localization:
 
       ## moltbot 設定
 
-      **方式一：設定檔** - 在 `clawdbot.json` 中加入：
+      **方式一：CLI 指令**（透過 Zeabur 指令）：
+      ```bash
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
+      ```
+
+      **方式二：編輯設定檔** - 在 `clawdbot.json` 中加入：
       ```json
       {
         "browser": {
           "enabled": true,
           "attachOnly": true,
-          "defaultProfile": "sandbox",
           "profiles": {
-            "sandbox": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222",
-              "color": "#FF4500"
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222"
             }
           }
         }
       }
       ```
 
-      **方式二：CLI 命令**：
-      ```bash
-      # 建立瀏覽器 profile
-      moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
-
-      # 啟用瀏覽器並設定預設 profile
-      moltbot config set browser.enabled true
-      moltbot config set browser.attachOnly true
-      moltbot config set browser.defaultProfile sandbox
-      ```
-
-      > 注意：設定變更後需重新啟動 gateway。
+      完成後重新啟動 gateway 以套用設定。
 
       ## 資源需求
       - **建議配置**：1 vCPU、1 GB RAM
@@ -206,35 +194,29 @@ localization:
 
       ## moltbot 配置
 
-      **方式一：配置文件** - 在 `clawdbot.json` 中添加：
+      **方式一：CLI 命令**（通过 Zeabur 命令）：
+      ```bash
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
+      ```
+
+      **方式二：编辑配置文件** - 在 `clawdbot.json` 中添加：
       ```json
       {
         "browser": {
           "enabled": true,
           "attachOnly": true,
-          "defaultProfile": "sandbox",
           "profiles": {
-            "sandbox": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222",
-              "color": "#FF4500"
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222"
             }
           }
         }
       }
       ```
 
-      **方式二：CLI 命令**：
-      ```bash
-      # 创建浏览器 profile
-      moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
-
-      # 启用浏览器并设置默认 profile
-      moltbot config set browser.enabled true
-      moltbot config set browser.attachOnly true
-      moltbot config set browser.defaultProfile sandbox
-      ```
-
-      > 注意：配置变更后需重新启动 gateway。
+      完成后重新启动 gateway 以应用设置。
 
       ## 资源需求
       - **建议配置**：1 vCPU、1 GB RAM
@@ -278,35 +260,29 @@ localization:
 
       ## moltbot 設定
 
-      **方法1：設定ファイル** - `clawdbot.json` に追加：
+      **方法1：CLI コマンド**（Zeabur コマンド経由）：
+      ```bash
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
+      ```
+
+      **方法2：設定ファイルを編集** - `clawdbot.json` に追加：
       ```json
       {
         "browser": {
           "enabled": true,
           "attachOnly": true,
-          "defaultProfile": "sandbox",
           "profiles": {
-            "sandbox": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222",
-              "color": "#FF4500"
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222"
             }
           }
         }
       }
       ```
 
-      **方法2：CLI コマンド**：
-      ```bash
-      # ブラウザプロファイルを作成
-      moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
-
-      # ブラウザを有効にしてデフォルトプロファイルを設定
-      moltbot config set browser.enabled true
-      moltbot config set browser.attachOnly true
-      moltbot config set browser.defaultProfile sandbox
-      ```
-
-      > 注意：設定変更後は gateway を再起動してください。
+      完了後、gateway を再起動して設定を適用してください。
 
       ## リソース要件
       - **推奨構成**：1 vCPU、1 GB RAM
@@ -350,35 +326,29 @@ localization:
 
       ## Konfigurasi untuk moltbot
 
-      **Opsi 1: File konfigurasi** - Tambahkan ke `clawdbot.json`:
+      **Opsi 1: Perintah CLI** (melalui Zeabur Command):
+      ```bash
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
+      ```
+
+      **Opsi 2: Edit file konfigurasi** - Tambahkan ke `clawdbot.json`:
       ```json
       {
         "browser": {
           "enabled": true,
           "attachOnly": true,
-          "defaultProfile": "sandbox",
           "profiles": {
-            "sandbox": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222",
-              "color": "#FF4500"
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222"
             }
           }
         }
       }
       ```
 
-      **Opsi 2: Perintah CLI**:
-      ```bash
-      # Buat profil browser
-      moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
-
-      # Aktifkan browser dan atur profil default
-      moltbot config set browser.enabled true
-      moltbot config set browser.attachOnly true
-      moltbot config set browser.defaultProfile sandbox
-      ```
-
-      > Catatan: Restart gateway setelah perubahan konfigurasi.
+      Setelah selesai, restart gateway untuk menerapkan pengaturan.
 
       ## Kebutuhan Sumber Daya
       - **Rekomendasi**: 1 vCPU, 1 GB RAM
@@ -422,35 +392,29 @@ localization:
 
       ## Configuración para moltbot
 
-      **Opción 1: Archivo de configuración** - Agregar a `clawdbot.json`:
+      **Opción 1: Comandos CLI** (vía Zeabur Command):
+      ```bash
+      moltbot config set browser.enabled true
+      moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
+      ```
+
+      **Opción 2: Editar archivo de configuración** - Agregar a `clawdbot.json`:
       ```json
       {
         "browser": {
           "enabled": true,
           "attachOnly": true,
-          "defaultProfile": "sandbox",
           "profiles": {
-            "sandbox": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222",
-              "color": "#FF4500"
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222"
             }
           }
         }
       }
       ```
 
-      **Opción 2: Comandos CLI**:
-      ```bash
-      # Crear perfil de navegador
-      moltbot browser create-profile --name sandbox --cdp-url http://moltbot-sandbox-browser:9222 --color "#FF4500"
-
-      # Habilitar navegador y establecer perfil predeterminado
-      moltbot config set browser.enabled true
-      moltbot config set browser.attachOnly true
-      moltbot config set browser.defaultProfile sandbox
-      ```
-
-      > Nota: Reinicie el gateway después de los cambios de configuración.
+      Después, reinicie el gateway para aplicar los cambios.
 
       ## Recursos
       - **Recomendado**: 1 vCPU, 1 GB RAM
