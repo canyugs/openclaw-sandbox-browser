@@ -44,8 +44,14 @@ spec:
       {
         "browser": {
           "enabled": true,
-          "cdpUrl": "http://moltbot-sandbox-browser:9222",
-          "attachOnly": true
+          "attachOnly": true,
+          "defaultProfile": "clawd",
+          "profiles": {
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#FF4500"
+            }
+          }
         }
       }
       ```
@@ -55,6 +61,7 @@ spec:
       - **Heavy usage**: 2 vCPU, 2 GB RAM
 
       ## Documentation
+      - moltbot Browser Tool: https://docs.molt.bot/tools/browser
       - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
 
     services:
@@ -111,8 +118,14 @@ localization:
       {
         "browser": {
           "enabled": true,
-          "cdpUrl": "http://moltbot-sandbox-browser:9222",
-          "attachOnly": true
+          "attachOnly": true,
+          "defaultProfile": "clawd",
+          "profiles": {
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#FF4500"
+            }
+          }
         }
       }
       ```
@@ -122,7 +135,8 @@ localization:
       - **大量使用**：2 vCPU、2 GB RAM
 
       ## 文件
-      - GitHub：https://github.com/zeabur/moltbot-sandbox-browser
+      - moltbot 瀏覽器工具：https://docs.molt.bot/tools/browser
+      - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
 
   zh-CN:
     name: moltbot 浏览器沙盒
@@ -156,8 +170,14 @@ localization:
       {
         "browser": {
           "enabled": true,
-          "cdpUrl": "http://moltbot-sandbox-browser:9222",
-          "attachOnly": true
+          "attachOnly": true,
+          "defaultProfile": "clawd",
+          "profiles": {
+            "clawd": {
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#FF4500"
+            }
+          }
         }
       }
       ```
@@ -167,4 +187,5 @@ localization:
       - **大量使用**：2 vCPU、2 GB RAM
 
       ## 文档
-      - GitHub：https://github.com/zeabur/moltbot-sandbox-browser
+      - moltbot 浏览器工具：https://docs.molt.bot/tools/browser
+      - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
