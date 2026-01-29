@@ -44,10 +44,11 @@ spec:
       ```bash
       moltbot config set browser.enabled true
       moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.color "#E44D26"
       moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
       ```
 
-      **Option 2: Edit config file** - Add to `clawdbot.json`:
+      **Option 2: Edit config file** - Add to `moltbot.json`:
       ```json
       {
         "browser": {
@@ -55,7 +56,8 @@ spec:
           "attachOnly": true,
           "profiles": {
             "clawd": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222"
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#E44D26"
             }
           }
         }
@@ -94,9 +96,9 @@ spec:
             type: TCP
             port: cdp
           env:
-            CLAWDBOT_BROWSER_HEADLESS:
+            MOLTBOT_BROWSER_HEADLESS:
               default: "1"
-            CLAWDBOT_BROWSER_CDP_PORT:
+            MOLTBOT_BROWSER_CDP_PORT:
               default: "9222"
               readonly: true
 
@@ -133,10 +135,11 @@ localization:
       ```bash
       moltbot config set browser.enabled true
       moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.color "#E44D26"
       moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
       ```
 
-      **方式二：編輯設定檔** - 在 `clawdbot.json` 中加入：
+      **方式二：編輯設定檔** - 在 `moltbot.json` 中加入：
       ```json
       {
         "browser": {
@@ -144,7 +147,8 @@ localization:
           "attachOnly": true,
           "profiles": {
             "clawd": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222"
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#E44D26"
             }
           }
         }
@@ -200,10 +204,11 @@ localization:
       ```bash
       moltbot config set browser.enabled true
       moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.color "#E44D26"
       moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
       ```
 
-      **方式二：编辑配置文件** - 在 `clawdbot.json` 中添加：
+      **方式二：编辑配置文件** - 在 `moltbot.json` 中添加：
       ```json
       {
         "browser": {
@@ -211,7 +216,8 @@ localization:
           "attachOnly": true,
           "profiles": {
             "clawd": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222"
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#E44D26"
             }
           }
         }
@@ -267,10 +273,11 @@ localization:
       ```bash
       moltbot config set browser.enabled true
       moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.color "#E44D26"
       moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
       ```
 
-      **方法2：設定ファイルを編集** - `clawdbot.json` に追加：
+      **方法2：設定ファイルを編集** - `moltbot.json` に追加：
       ```json
       {
         "browser": {
@@ -278,7 +285,8 @@ localization:
           "attachOnly": true,
           "profiles": {
             "clawd": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222"
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#E44D26"
             }
           }
         }
@@ -334,10 +342,11 @@ localization:
       ```bash
       moltbot config set browser.enabled true
       moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.color "#E44D26"
       moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
       ```
 
-      **Opsi 2: Edit file konfigurasi** - Tambahkan ke `clawdbot.json`:
+      **Opsi 2: Edit file konfigurasi** - Tambahkan ke `moltbot.json`:
       ```json
       {
         "browser": {
@@ -345,7 +354,8 @@ localization:
           "attachOnly": true,
           "profiles": {
             "clawd": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222"
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#E44D26"
             }
           }
         }
@@ -401,10 +411,11 @@ localization:
       ```bash
       moltbot config set browser.enabled true
       moltbot config set browser.attachOnly true
+      moltbot config set browser.profiles.clawd.color "#E44D26"
       moltbot config set browser.profiles.clawd.cdpUrl "http://moltbot-sandbox-browser:9222"
       ```
 
-      **Opción 2: Editar archivo de configuración** - Agregar a `clawdbot.json`:
+      **Opción 2: Editar archivo de configuración** - Agregar a `moltbot.json`:
       ```json
       {
         "browser": {
@@ -412,7 +423,8 @@ localization:
           "attachOnly": true,
           "profiles": {
             "clawd": {
-              "cdpUrl": "http://moltbot-sandbox-browser:9222"
+              "cdpUrl": "http://moltbot-sandbox-browser:9222",
+              "color": "#E44D26"
             }
           }
         }

@@ -5,8 +5,9 @@ export HOME=/home/browser
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 
-CDP_PORT="${CLAWDBOT_BROWSER_CDP_PORT:-9222}"
-HEADLESS="${CLAWDBOT_BROWSER_HEADLESS:-1}"
+# Support both new (MOLTBOT_*) and legacy (CLAWDBOT_*) env vars
+CDP_PORT="${MOLTBOT_BROWSER_CDP_PORT:-${CLAWDBOT_BROWSER_CDP_PORT:-9222}}"
+HEADLESS="${MOLTBOT_BROWSER_HEADLESS:-${CLAWDBOT_BROWSER_HEADLESS:-1}}"
 CHROME_CDP_PORT=9223  # Internal port, nginx proxies from CDP_PORT
 
 mkdir -p "${HOME}/.chrome" "${XDG_CONFIG_HOME}" "${XDG_CACHE_HOME}"
