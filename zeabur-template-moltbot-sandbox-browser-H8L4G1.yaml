@@ -75,6 +75,7 @@ spec:
       - `DEPRECATED_ENDPOINT` - Google Cloud Messaging not needed for headless mode
 
       ## Documentation
+      - moltbot Template: https://zeabur.com/templates/VTZ4FX
       - moltbot Browser Tool: https://docs.molt.bot/tools/browser
       - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
 
@@ -163,6 +164,7 @@ localization:
       - `DEPRECATED_ENDPOINT` - 無頭模式不需要 Google Cloud Messaging
 
       ## 文件
+      - moltbot 模板：https://zeabur.com/templates/VTZ4FX
       - moltbot 瀏覽器工具：https://docs.molt.bot/tools/browser
       - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
 
@@ -229,6 +231,7 @@ localization:
       - `DEPRECATED_ENDPOINT` - 无头模式不需要 Google Cloud Messaging
 
       ## 文档
+      - moltbot 模板：https://zeabur.com/templates/VTZ4FX
       - moltbot 浏览器工具：https://docs.molt.bot/tools/browser
       - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
 
@@ -295,6 +298,7 @@ localization:
       - `DEPRECATED_ENDPOINT` - ヘッドレスモードでは Google Cloud Messaging 不要
 
       ## ドキュメント
+      - moltbot テンプレート：https://zeabur.com/templates/VTZ4FX
       - moltbot ブラウザツール：https://docs.molt.bot/tools/browser
       - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
 
@@ -361,6 +365,7 @@ localization:
       - `DEPRECATED_ENDPOINT` - Google Cloud Messaging tidak diperlukan untuk mode headless
 
       ## Dokumentasi
+      - Template moltbot: https://zeabur.com/templates/VTZ4FX
       - moltbot Browser Tool: https://docs.molt.bot/tools/browser
       - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
 
@@ -427,5 +432,6 @@ localization:
       - `DEPRECATED_ENDPOINT` - Google Cloud Messaging no es necesario para el modo headless
 
       ## Documentación
+      - Plantilla moltbot: https://zeabur.com/templates/VTZ4FX
       - moltbot Browser Tool: https://docs.molt.bot/tools/browser
       - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
