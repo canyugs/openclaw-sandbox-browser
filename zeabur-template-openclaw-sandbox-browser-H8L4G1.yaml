@@ -2,11 +2,11 @@
 apiVersion: zeabur.com/v1
 kind: Template
 metadata:
-    name: moltbot Browser Sandbox
+    name: OpenClaw Browser Sandbox
 spec:
     description: |
-      Headless Chromium browser sandbox that can be controlled via Chrome DevTools Protocol (CDP). Use this with moltbot or other services that need browser automation capabilities.
-    icon: https://raw.githubusercontent.com/moltbot/moltbot/main/docs/assets/pixel-lobster.svg
+      Headless Chromium browser sandbox that can be controlled via Chrome DevTools Protocol (CDP). Use this with OpenClaw or other services that need browser automation capabilities.
+    icon: https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/pixel-lobster.svg
     tags:
       - Browser
       - Automation
@@ -14,11 +14,11 @@ spec:
       - CDP
 
     readme: |
-      # moltbot Browser Sandbox
+      # OpenClaw Browser Sandbox
       A headless Chromium browser that can be controlled via Chrome DevTools Protocol (CDP).
 
       ## Use Cases
-      - Browser automation with moltbot
+      - Browser automation with OpenClaw
       - Web scraping
       - Automated testing
       - Screenshot services
@@ -26,7 +26,7 @@ spec:
       ## How to Connect
       Other services in the same Zeabur project can connect via:
       ```
-      http://moltbot-sandbox-browser:9222
+      http://openclaw-sandbox-browser:9222
       ```
 
       ## CDP Endpoints
@@ -35,10 +35,10 @@ spec:
       - `GET /json/new?url=<url>` - Open new tab
       - WebSocket connections for DevTools protocol
 
-      ## Configuration for moltbot
+      ## Configuration for OpenClaw
 
       **Option 1: Edit config file via Zeabur Files**
-      1. Go to Zeabur dashboard and open your **moltbot** service
+      1. Go to Zeabur dashboard and open your **OpenClaw** service
       2. Click **Files** to open the file manager
       3. Navigate to `/home/node/.openclaw/openclaw.json`
       4. Add the browser configuration (merge with existing config):
@@ -48,23 +48,23 @@ spec:
         "attachOnly": true,
         "profiles": {
           "clawd": {
-            "cdpUrl": "http://moltbot-sandbox-browser:9222",
+            "cdpUrl": "http://openclaw-sandbox-browser:9222",
             "color": "#E44D26"
           }
         }
       }
       ```
-      5. Save the file and restart the moltbot service
+      5. Save the file and restart the OpenClaw service
 
-      **Option 2: moltbot Web UI**
-      1. Open moltbot Web UI (click the domain link in Zeabur dashboard)
+      **Option 2: OpenClaw Web UI**
+      1. Open OpenClaw Web UI (click the domain link in Zeabur dashboard)
       2. Go to **Settings** page
       3. Find **Browser** section and enable **Browser Tool**
       4. Enable **Attach Only** mode
       5. Expand **Profiles** section and click **+ Add Entry**
       6. Fill in the profile settings:
          - Profile name: `clawd`
-         - **Cdp Url**: `http://moltbot-sandbox-browser:9222`
+         - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (optional)
       7. Save settings - changes apply automatically
 
@@ -88,17 +88,17 @@ spec:
       - `DEPRECATED_ENDPOINT` - Google Cloud Messaging not needed for headless mode
 
       ## Documentation
-      - moltbot Template: https://zeabur.com/templates/VTZ4FX
-      - moltbot Browser Tool: https://docs.openclaw.ai/tools/browser
-      - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
+      - OpenClaw Template: https://zeabur.com/templates/VTZ4FX
+      - OpenClaw Browser Tool: https://docs.openclaw.ai/tools/browser
+      - GitHub: https://github.com/canyugs/openclaw-sandbox-browser
 
     services:
-      - name: moltbot-sandbox-browser
-        icon: https://raw.githubusercontent.com/moltbot/moltbot/main/docs/assets/pixel-lobster.svg
+      - name: openclaw-sandbox-browser
+        icon: https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/pixel-lobster.svg
         template: PREBUILT
         spec:
           source:
-            image: ghcr.io/canyugs/moltbot-sandbox-browser:main
+            image: ghcr.io/canyugs/openclaw-sandbox-browser:main
           ports:
           - id: cdp
             port: 9222
@@ -107,23 +107,23 @@ spec:
             type: TCP
             port: cdp
           env:
-            MOLTBOT_BROWSER_HEADLESS:
+            OPENCLAW_BROWSER_HEADLESS:
               default: "1"
-            MOLTBOT_BROWSER_CDP_PORT:
+            OPENCLAW_BROWSER_CDP_PORT:
               default: "9222"
               readonly: true
 
 localization:
   zh-TW:
-    name: moltbot 瀏覽器沙盒
+    name: OpenClaw 瀏覽器沙盒
     description: |
-      無頭 Chromium 瀏覽器沙盒，可透過 Chrome DevTools Protocol (CDP) 控制。可搭配 moltbot 或其他需要瀏覽器自動化功能的服務使用。
+      無頭 Chromium 瀏覽器沙盒，可透過 Chrome DevTools Protocol (CDP) 控制。可搭配 OpenClaw 或其他需要瀏覽器自動化功能的服務使用。
     readme: |
-      # moltbot 瀏覽器沙盒
+      # OpenClaw 瀏覽器沙盒
       可透過 Chrome DevTools Protocol (CDP) 控制的無頭 Chromium 瀏覽器。
 
       ## 使用場景
-      - 搭配 moltbot 進行瀏覽器自動化
+      - 搭配 OpenClaw 進行瀏覽器自動化
       - 網頁爬蟲
       - 自動化測試
       - 截圖服務
@@ -131,7 +131,7 @@ localization:
       ## 連線方式
       同一個 Zeabur 專案中的其他服務可透過以下方式連線：
       ```
-      http://moltbot-sandbox-browser:9222
+      http://openclaw-sandbox-browser:9222
       ```
 
       ## CDP 端點
@@ -140,10 +140,10 @@ localization:
       - `GET /json/new?url=<url>` - 開啟新分頁
       - WebSocket 連線用於 DevTools 協議
 
-      ## moltbot 設定
+      ## OpenClaw 設定
 
       **方式一：透過 Zeabur 檔案功能編輯設定檔**
-      1. 前往 Zeabur 控制台，開啟您的 **moltbot** 服務
+      1. 前往 Zeabur 控制台，開啟您的 **OpenClaw** 服務
       2. 點擊**檔案**開啟檔案管理
       3. 找到 `/home/node/.openclaw/openclaw.json`
       4. 加入瀏覽器設定（與現有設定合併）：
@@ -153,23 +153,23 @@ localization:
         "attachOnly": true,
         "profiles": {
           "clawd": {
-            "cdpUrl": "http://moltbot-sandbox-browser:9222",
+            "cdpUrl": "http://openclaw-sandbox-browser:9222",
             "color": "#E44D26"
           }
         }
       }
       ```
-      5. 儲存檔案並重新啟動 moltbot 服務
+      5. 儲存檔案並重新啟動 OpenClaw 服務
 
-      **方式二：moltbot Web UI**
-      1. 開啟 moltbot Web UI（點擊 Zeabur 控制台中的網域連結）
+      **方式二：OpenClaw Web UI**
+      1. 開啟 OpenClaw Web UI（點擊 Zeabur 控制台中的網域連結）
       2. 前往 **Settings** 頁面
       3. 找到 **Browser** 區塊並啟用 **Browser Tool**
       4. 啟用 **Attach Only** 模式
       5. 展開 **Profiles** 區塊並點擊 **+ Add Entry**
       6. 填入設定檔資訊：
          - 設定檔名稱：`clawd`
-         - **Cdp Url**：`http://moltbot-sandbox-browser:9222`
+         - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（選填）
       7. 儲存設定 - 變更會自動套用
 
@@ -193,20 +193,20 @@ localization:
       - `DEPRECATED_ENDPOINT` - 無頭模式不需要 Google Cloud Messaging
 
       ## 文件
-      - moltbot 模板：https://zeabur.com/templates/VTZ4FX
-      - moltbot 瀏覽器工具：https://docs.openclaw.ai/tools/browser
-      - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
+      - OpenClaw 模板：https://zeabur.com/templates/VTZ4FX
+      - OpenClaw 瀏覽器工具：https://docs.openclaw.ai/tools/browser
+      - GitHub：https://github.com/canyugs/openclaw-sandbox-browser
 
   zh-CN:
-    name: moltbot 浏览器沙盒
+    name: OpenClaw 浏览器沙盒
     description: |
-      无头 Chromium 浏览器沙盒，可通过 Chrome DevTools Protocol (CDP) 控制。可搭配 moltbot 或其他需要浏览器自动化功能的服务使用。
+      无头 Chromium 浏览器沙盒，可通过 Chrome DevTools Protocol (CDP) 控制。可搭配 OpenClaw 或其他需要浏览器自动化功能的服务使用。
     readme: |
-      # moltbot 浏览器沙盒
+      # OpenClaw 浏览器沙盒
       可通过 Chrome DevTools Protocol (CDP) 控制的无头 Chromium 浏览器。
 
       ## 使用场景
-      - 搭配 moltbot 进行浏览器自动化
+      - 搭配 OpenClaw 进行浏览器自动化
       - 网页爬虫
       - 自动化测试
       - 截图服务
@@ -214,7 +214,7 @@ localization:
       ## 连接方式
       同一个 Zeabur 项目中的其他服务可通过以下方式连接：
       ```
-      http://moltbot-sandbox-browser:9222
+      http://openclaw-sandbox-browser:9222
       ```
 
       ## CDP 端点
@@ -223,10 +223,10 @@ localization:
       - `GET /json/new?url=<url>` - 打开新标签页
       - WebSocket 连接用于 DevTools 协议
 
-      ## moltbot 配置
+      ## OpenClaw 配置
 
       **方式一：通过 Zeabur 文件功能编辑配置文件**
-      1. 前往 Zeabur 控制台，打开您的 **moltbot** 服务
+      1. 前往 Zeabur 控制台，打开您的 **OpenClaw** 服务
       2. 点击**文件**打开文件管理
       3. 找到 `/home/node/.openclaw/openclaw.json`
       4. 添加浏览器配置（与现有配置合并）：
@@ -236,23 +236,23 @@ localization:
         "attachOnly": true,
         "profiles": {
           "clawd": {
-            "cdpUrl": "http://moltbot-sandbox-browser:9222",
+            "cdpUrl": "http://openclaw-sandbox-browser:9222",
             "color": "#E44D26"
           }
         }
       }
       ```
-      5. 保存文件并重新启动 moltbot 服务
+      5. 保存文件并重新启动 OpenClaw 服务
 
-      **方式二：moltbot Web UI**
-      1. 打开 moltbot Web UI（点击 Zeabur 控制台中的域名链接）
+      **方式二：OpenClaw Web UI**
+      1. 打开 OpenClaw Web UI（点击 Zeabur 控制台中的域名链接）
       2. 前往 **Settings** 页面
       3. 找到 **Browser** 区块并启用 **Browser Tool**
       4. 启用 **Attach Only** 模式
       5. 展开 **Profiles** 区块并点击 **+ Add Entry**
       6. 填入配置文件信息：
          - 配置文件名称：`clawd`
-         - **Cdp Url**：`http://moltbot-sandbox-browser:9222`
+         - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（选填）
       7. 保存设置 - 变更会自动应用
 
@@ -276,20 +276,20 @@ localization:
       - `DEPRECATED_ENDPOINT` - 无头模式不需要 Google Cloud Messaging
 
       ## 文档
-      - moltbot 模板：https://zeabur.com/templates/VTZ4FX
-      - moltbot 浏览器工具：https://docs.openclaw.ai/tools/browser
-      - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
+      - OpenClaw 模板：https://zeabur.com/templates/VTZ4FX
+      - OpenClaw 浏览器工具：https://docs.openclaw.ai/tools/browser
+      - GitHub：https://github.com/canyugs/openclaw-sandbox-browser
 
   ja:
-    name: moltbot ブラウザサンドボックス
+    name: OpenClaw ブラウザサンドボックス
     description: |
-      Chrome DevTools Protocol (CDP) で制御可能なヘッドレス Chromium ブラウザサンドボックス。moltbot やブラウザ自動化が必要な他のサービスと組み合わせて使用できます。
+      Chrome DevTools Protocol (CDP) で制御可能なヘッドレス Chromium ブラウザサンドボックス。OpenClaw やブラウザ自動化が必要な他のサービスと組み合わせて使用できます。
     readme: |
-      # moltbot ブラウザサンドボックス
+      # OpenClaw ブラウザサンドボックス
       Chrome DevTools Protocol (CDP) で制御可能なヘッドレス Chromium ブラウザ。
 
       ## ユースケース
-      - moltbot でのブラウザ自動化
+      - OpenClaw でのブラウザ自動化
       - ウェブスクレイピング
       - 自動テスト
       - スクリーンショットサービス
@@ -297,7 +297,7 @@ localization:
       ## 接続方法
       同じ Zeabur プロジェクト内の他のサービスから以下で接続できます：
       ```
-      http://moltbot-sandbox-browser:9222
+      http://openclaw-sandbox-browser:9222
       ```
 
       ## CDP エンドポイント
@@ -306,10 +306,10 @@ localization:
       - `GET /json/new?url=<url>` - 新しいタブを開く
       - DevTools プロトコル用 WebSocket 接続
 
-      ## moltbot 設定
+      ## OpenClaw 設定
 
       **方法1：Zeabur ファイル機能で設定ファイルを編集**
-      1. Zeabur ダッシュボードで **moltbot** サービスを開く
+      1. Zeabur ダッシュボードで **OpenClaw** サービスを開く
       2. **ファイル**をクリックしてファイルマネージャーを開く
       3. `/home/node/.openclaw/openclaw.json` を見つける
       4. ブラウザ設定を追加（既存の設定とマージ）：
@@ -319,23 +319,23 @@ localization:
         "attachOnly": true,
         "profiles": {
           "clawd": {
-            "cdpUrl": "http://moltbot-sandbox-browser:9222",
+            "cdpUrl": "http://openclaw-sandbox-browser:9222",
             "color": "#E44D26"
           }
         }
       }
       ```
-      5. ファイルを保存して moltbot サービスを再起動
+      5. ファイルを保存して OpenClaw サービスを再起動
 
-      **方法2：moltbot Web UI**
-      1. moltbot Web UI を開く（Zeabur ダッシュボードでドメインリンクをクリック）
+      **方法2：OpenClaw Web UI**
+      1. OpenClaw Web UI を開く（Zeabur ダッシュボードでドメインリンクをクリック）
       2. **Settings** ページに移動
       3. **Browser** セクションを見つけて **Browser Tool** を有効化
       4. **Attach Only** モードを有効化
       5. **Profiles** セクションを展開して **+ Add Entry** をクリック
       6. プロファイル設定を入力：
          - プロファイル名：`clawd`
-         - **Cdp Url**：`http://moltbot-sandbox-browser:9222`
+         - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（任意）
       7. 設定を保存 - 変更は自動的に適用されます
 
@@ -359,20 +359,20 @@ localization:
       - `DEPRECATED_ENDPOINT` - ヘッドレスモードでは Google Cloud Messaging 不要
 
       ## ドキュメント
-      - moltbot テンプレート：https://zeabur.com/templates/VTZ4FX
-      - moltbot ブラウザツール：https://docs.openclaw.ai/tools/browser
-      - GitHub：https://github.com/canyugs/moltbot-sandbox-browser
+      - OpenClaw テンプレート：https://zeabur.com/templates/VTZ4FX
+      - OpenClaw ブラウザツール：https://docs.openclaw.ai/tools/browser
+      - GitHub：https://github.com/canyugs/openclaw-sandbox-browser
 
   id:
-    name: moltbot Browser Sandbox
+    name: OpenClaw Browser Sandbox
     description: |
-      Sandbox browser Chromium headless yang dapat dikontrol melalui Chrome DevTools Protocol (CDP). Gunakan dengan moltbot atau layanan lain yang membutuhkan kemampuan otomatisasi browser.
+      Sandbox browser Chromium headless yang dapat dikontrol melalui Chrome DevTools Protocol (CDP). Gunakan dengan OpenClaw atau layanan lain yang membutuhkan kemampuan otomatisasi browser.
     readme: |
-      # moltbot Browser Sandbox
+      # OpenClaw Browser Sandbox
       Browser Chromium headless yang dapat dikontrol melalui Chrome DevTools Protocol (CDP).
 
       ## Kasus Penggunaan
-      - Otomatisasi browser dengan moltbot
+      - Otomatisasi browser dengan OpenClaw
       - Web scraping
       - Pengujian otomatis
       - Layanan screenshot
@@ -380,7 +380,7 @@ localization:
       ## Cara Menghubungkan
       Layanan lain dalam proyek Zeabur yang sama dapat terhubung melalui:
       ```
-      http://moltbot-sandbox-browser:9222
+      http://openclaw-sandbox-browser:9222
       ```
 
       ## Endpoint CDP
@@ -389,10 +389,10 @@ localization:
       - `GET /json/new?url=<url>` - Buka tab baru
       - Koneksi WebSocket untuk protokol DevTools
 
-      ## Konfigurasi untuk moltbot
+      ## Konfigurasi untuk OpenClaw
 
       **Opsi 1: Edit file konfigurasi via Zeabur Files**
-      1. Buka dashboard Zeabur dan buka layanan **moltbot** Anda
+      1. Buka dashboard Zeabur dan buka layanan **OpenClaw** Anda
       2. Klik **Files** untuk membuka file manager
       3. Temukan `/home/node/.openclaw/openclaw.json`
       4. Tambahkan konfigurasi browser (gabungkan dengan konfigurasi yang ada):
@@ -402,23 +402,23 @@ localization:
         "attachOnly": true,
         "profiles": {
           "clawd": {
-            "cdpUrl": "http://moltbot-sandbox-browser:9222",
+            "cdpUrl": "http://openclaw-sandbox-browser:9222",
             "color": "#E44D26"
           }
         }
       }
       ```
-      5. Simpan file dan restart layanan moltbot
+      5. Simpan file dan restart layanan OpenClaw
 
-      **Opsi 2: moltbot Web UI**
-      1. Buka moltbot Web UI (klik tautan domain di dashboard Zeabur)
+      **Opsi 2: OpenClaw Web UI**
+      1. Buka OpenClaw Web UI (klik tautan domain di dashboard Zeabur)
       2. Buka halaman **Settings**
       3. Temukan bagian **Browser** dan aktifkan **Browser Tool**
       4. Aktifkan mode **Attach Only**
       5. Perluas bagian **Profiles** dan klik **+ Add Entry**
       6. Isi pengaturan profil:
          - Nama profil: `clawd`
-         - **Cdp Url**: `http://moltbot-sandbox-browser:9222`
+         - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (opsional)
       7. Simpan pengaturan - perubahan diterapkan secara otomatis
 
@@ -442,20 +442,20 @@ localization:
       - `DEPRECATED_ENDPOINT` - Google Cloud Messaging tidak diperlukan untuk mode headless
 
       ## Dokumentasi
-      - Template moltbot: https://zeabur.com/templates/VTZ4FX
-      - moltbot Browser Tool: https://docs.openclaw.ai/tools/browser
-      - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
+      - Template OpenClaw: https://zeabur.com/templates/VTZ4FX
+      - OpenClaw Browser Tool: https://docs.openclaw.ai/tools/browser
+      - GitHub: https://github.com/canyugs/openclaw-sandbox-browser
 
   es:
-    name: moltbot Browser Sandbox
+    name: OpenClaw Browser Sandbox
     description: |
-      Sandbox de navegador Chromium headless que puede ser controlado a través del Chrome DevTools Protocol (CDP). Úsalo con moltbot u otros servicios que necesiten capacidades de automatización de navegador.
+      Sandbox de navegador Chromium headless que puede ser controlado a través del Chrome DevTools Protocol (CDP). Úsalo con OpenClaw u otros servicios que necesiten capacidades de automatización de navegador.
     readme: |
-      # moltbot Browser Sandbox
+      # OpenClaw Browser Sandbox
       Navegador Chromium headless que puede ser controlado a través del Chrome DevTools Protocol (CDP).
 
       ## Casos de Uso
-      - Automatización de navegador con moltbot
+      - Automatización de navegador con OpenClaw
       - Web scraping
       - Pruebas automatizadas
       - Servicios de captura de pantalla
@@ -463,7 +463,7 @@ localization:
       ## Cómo Conectar
       Otros servicios en el mismo proyecto de Zeabur pueden conectarse a través de:
       ```
-      http://moltbot-sandbox-browser:9222
+      http://openclaw-sandbox-browser:9222
       ```
 
       ## Endpoints CDP
@@ -472,10 +472,10 @@ localization:
       - `GET /json/new?url=<url>` - Abrir nueva pestaña
       - Conexiones WebSocket para el protocolo DevTools
 
-      ## Configuración para moltbot
+      ## Configuración para OpenClaw
 
       **Opción 1: Editar archivo de configuración via Zeabur Files**
-      1. Vaya al panel de Zeabur y abra su servicio **moltbot**
+      1. Vaya al panel de Zeabur y abra su servicio **OpenClaw**
       2. Haga clic en **Files** para abrir el administrador de archivos
       3. Navegue a `/home/node/.openclaw/openclaw.json`
       4. Agregue la configuración del navegador (combine con la configuración existente):
@@ -485,23 +485,23 @@ localization:
         "attachOnly": true,
         "profiles": {
           "clawd": {
-            "cdpUrl": "http://moltbot-sandbox-browser:9222",
+            "cdpUrl": "http://openclaw-sandbox-browser:9222",
             "color": "#E44D26"
           }
         }
       }
       ```
-      5. Guarde el archivo y reinicie el servicio moltbot
+      5. Guarde el archivo y reinicie el servicio OpenClaw
 
-      **Opción 2: moltbot Web UI**
-      1. Abra moltbot Web UI (haga clic en el enlace del dominio en el panel de Zeabur)
+      **Opción 2: OpenClaw Web UI**
+      1. Abra OpenClaw Web UI (haga clic en el enlace del dominio en el panel de Zeabur)
       2. Vaya a la página **Settings**
       3. Encuentre la sección **Browser** y habilite **Browser Tool**
       4. Habilite el modo **Attach Only**
       5. Expanda la sección **Profiles** y haga clic en **+ Add Entry**
       6. Complete la configuración del perfil:
          - Nombre del perfil: `clawd`
-         - **Cdp Url**: `http://moltbot-sandbox-browser:9222`
+         - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (opcional)
       7. Guarde la configuración - los cambios se aplican automáticamente
 
@@ -525,6 +525,6 @@ localization:
       - `DEPRECATED_ENDPOINT` - Google Cloud Messaging no es necesario para el modo headless
 
       ## Documentación
-      - Plantilla moltbot: https://zeabur.com/templates/VTZ4FX
-      - moltbot Browser Tool: https://docs.openclaw.ai/tools/browser
-      - GitHub: https://github.com/canyugs/moltbot-sandbox-browser
+      - Plantilla OpenClaw: https://zeabur.com/templates/VTZ4FX
+      - OpenClaw Browser Tool: https://docs.openclaw.ai/tools/browser
+      - GitHub: https://github.com/canyugs/openclaw-sandbox-browser
