@@ -71,19 +71,25 @@ spec:
          - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (optional)
       7. Save settings - changes apply automatically
+      
+      For detailed configuration options, see the [official documentation](https://docs.openclaw.ai/tools/browser#configuration).
 
-      ## Browser Configuration Options
-      | Option | Description |
-      |--------|-------------|
-      | `browser.enabled` | Enable browser tool (required) |
-      | `browser.attachOnly` | Use external browser instead of launching (required for this sandbox) |
-      | `browser.profiles.<name>.cdpUrl` | CDP endpoint URL |
-      | `browser.profiles.<name>.color` | Browser profile indicator color |
-      | `browser.profiles.<name>.userDataDir` | Custom user data directory (optional) |
 
       ## Resources
       - **Recommended**: 1 vCPU, 1 GB RAM
       - **Heavy usage**: 2 vCPU, 2 GB RAM
+
+      ## Testing Connection
+      After deploying, test the connection using curl from OpenClaw terminal:
+      ```bash
+      curl http://openclaw-sandbox-browser:9222/json/version
+      ```
+      
+      If successful, you should see a JSON response like:
+      ```json
+      {"Browser":"Chrome/...","Protocol-Version":"1.3",...}
+      ```
+
 
       ## Ignorable Errors
       The following error messages in logs are normal and can be safely ignored:
@@ -180,19 +186,25 @@ localization:
          - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（選填）
       7. 儲存設定 - 變更會自動套用
+      
+      詳細設定選項請參考[官方文件](https://docs.openclaw.ai/tools/browser#configuration)。
 
-      ## 瀏覽器設定選項
-      | 選項 | 說明 |
-      |------|------|
-      | `browser.enabled` | 啟用瀏覽器工具（必要） |
-      | `browser.attachOnly` | 使用外部瀏覽器而非自行啟動（此沙盒必要） |
-      | `browser.profiles.<名稱>.cdpUrl` | CDP 端點 URL |
-      | `browser.profiles.<名稱>.color` | 瀏覽器設定檔指示顏色 |
-      | `browser.profiles.<名稱>.userDataDir` | 自訂使用者資料目錄（選填） |
 
       ## 資源需求
       - **建議配置**：1 vCPU、1 GB RAM
       - **大量使用**：2 vCPU、2 GB RAM
+
+      ## 測試連線
+      部署完成後，從 OpenClaw 終端機使用 curl 測試連線：
+      ```bash
+      curl http://openclaw-sandbox-browser:9222/json/version
+      ```
+      
+      成功的話，您會看到類似以下的 JSON 回應：
+      ```json
+      {"Browser":"Chrome/...","Protocol-Version":"1.3",...}
+      ```
+
 
       ## 可忽略的錯誤
       以下日誌中的錯誤訊息是正常的，可以安全忽略：
@@ -267,19 +279,25 @@ localization:
          - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（选填）
       7. 保存设置 - 变更会自动应用
+      
+      详细配置选项请参考[官方文档](https://docs.openclaw.ai/tools/browser#configuration)。
 
-      ## 浏览器配置选项
-      | 选项 | 说明 |
-      |------|------|
-      | `browser.enabled` | 启用浏览器工具（必要） |
-      | `browser.attachOnly` | 使用外部浏览器而非自行启动（此沙盒必要） |
-      | `browser.profiles.<名称>.cdpUrl` | CDP 端点 URL |
-      | `browser.profiles.<名称>.color` | 浏览器配置文件指示颜色 |
-      | `browser.profiles.<名称>.userDataDir` | 自定义用户数据目录（选填） |
 
       ## 资源需求
       - **建议配置**：1 vCPU、1 GB RAM
       - **大量使用**：2 vCPU、2 GB RAM
+
+      ## 测试连线
+      部署完成后，从 OpenClaw 终端使用 curl 测试连线：
+      ```bash
+      curl http://openclaw-sandbox-browser:9222/json/version
+      ```
+      
+      成功的话，您会看到类似以下的 JSON 响应：
+      ```json
+      {"Browser":"Chrome/...","Protocol-Version":"1.3",...}
+      ```
+
 
       ## 可忽略的错误
       以下日志中的错误信息是正常的，可以安全忽略：
@@ -354,19 +372,25 @@ localization:
          - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（任意）
       7. 設定を保存 - 変更は自動的に適用されます
+      
+      詳細な設定オプションは[公式ドキュメント](https://docs.openclaw.ai/tools/browser#configuration)をご覧ください。
 
-      ## ブラウザ設定オプション
-      | オプション | 説明 |
-      |------------|------|
-      | `browser.enabled` | ブラウザツールを有効化（必須） |
-      | `browser.attachOnly` | 自身で起動せず外部ブラウザを使用（このサンドボックスでは必須） |
-      | `browser.profiles.<名前>.cdpUrl` | CDP エンドポイント URL |
-      | `browser.profiles.<名前>.color` | ブラウザプロファイルのインジケーター色 |
-      | `browser.profiles.<名前>.userDataDir` | カスタムユーザーデータディレクトリ（任意） |
 
       ## リソース要件
       - **推奨構成**：1 vCPU、1 GB RAM
       - **高負荷使用**：2 vCPU、2 GB RAM
+
+      ## 接続テスト
+      デプロイ後、OpenClaw ターミナルから curl で接続をテスト：
+      ```bash
+      curl http://openclaw-sandbox-browser:9222/json/version
+      ```
+      
+      成功すると、以下のような JSON レスポンスが表示されます：
+      ```json
+      {"Browser":"Chrome/...","Protocol-Version":"1.3",...}
+      ```
+
 
       ## 無視できるエラー
       以下のログエラーメッセージは正常であり、安全に無視できます：
@@ -441,19 +465,25 @@ localization:
          - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (opsional)
       7. Simpan pengaturan - perubahan diterapkan secara otomatis
+      
+      Untuk opsi konfigurasi detail, lihat [dokumentasi resmi](https://docs.openclaw.ai/tools/browser#configuration).
 
-      ## Opsi Konfigurasi Browser
-      | Opsi | Deskripsi |
-      |------|-----------|
-      | `browser.enabled` | Aktifkan browser tool (wajib) |
-      | `browser.attachOnly` | Gunakan browser eksternal alih-alih meluncurkan sendiri (wajib untuk sandbox ini) |
-      | `browser.profiles.<nama>.cdpUrl` | URL endpoint CDP |
-      | `browser.profiles.<nama>.color` | Warna indikator profil browser |
-      | `browser.profiles.<nama>.userDataDir` | Direktori data pengguna kustom (opsional) |
 
       ## Kebutuhan Sumber Daya
       - **Rekomendasi**: 1 vCPU, 1 GB RAM
       - **Penggunaan berat**: 2 vCPU, 2 GB RAM
+
+      ## Menguji Koneksi
+      Setelah deploy, uji koneksi menggunakan curl dari terminal OpenClaw:
+      ```bash
+      curl http://openclaw-sandbox-browser:9222/json/version
+      ```
+      
+      Jika berhasil, Anda akan melihat respons JSON seperti:
+      ```json
+      {"Browser":"Chrome/...","Protocol-Version":"1.3",...}
+      ```
+
 
       ## Error yang Dapat Diabaikan
       Pesan error berikut di log adalah normal dan dapat diabaikan dengan aman:
@@ -528,19 +558,25 @@ localization:
          - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (opcional)
       7. Guarde la configuración - los cambios se aplican automáticamente
+      
+      Para opciones de configuración detalladas, consulte la [documentación oficial](https://docs.openclaw.ai/tools/browser#configuration).
 
-      ## Opciones de Configuración del Navegador
-      | Opción | Descripción |
-      |--------|-------------|
-      | `browser.enabled` | Habilitar herramienta de navegador (requerido) |
-      | `browser.attachOnly` | Usar navegador externo en lugar de lanzar uno (requerido para este sandbox) |
-      | `browser.profiles.<nombre>.cdpUrl` | URL del endpoint CDP |
-      | `browser.profiles.<nombre>.color` | Color indicador del perfil del navegador |
-      | `browser.profiles.<nombre>.userDataDir` | Directorio de datos de usuario personalizado (opcional) |
 
       ## Recursos
       - **Recomendado**: 1 vCPU, 1 GB RAM
       - **Uso intensivo**: 2 vCPU, 2 GB RAM
+
+      ## Probar Conexión
+      Después de desplegar, pruebe la conexión usando curl desde la terminal de OpenClaw:
+      ```bash
+      curl http://openclaw-sandbox-browser:9222/json/version
+      ```
+      
+      Si tiene éxito, verá una respuesta JSON como:
+      ```json
+      {"Browser":"Chrome/...","Protocol-Version":"1.3",...}
+      ```
+
 
       ## Errores Ignorables
       Los siguientes mensajes de error en los logs son normales y pueden ignorarse de forma segura:
