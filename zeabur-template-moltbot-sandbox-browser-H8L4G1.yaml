@@ -46,10 +46,11 @@ spec:
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://moltbot-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -61,12 +62,13 @@ spec:
       2. Go to **Settings** page
       3. Find **Browser** section and enable **Browser Tool**
       4. Enable **Attach Only** mode
-      5. Expand **Profiles** section and click **+ Add Entry**
-      6. Fill in the profile settings:
-         - Profile name: `clawd`
+      5. Set default profile to `remote`
+      6. Expand **Profiles** section and click **+ Add Entry**
+      7. Fill in the profile settings:
+         - Profile name: `remote`
          - **Cdp Url**: `http://moltbot-sandbox-browser:9222`
-         - **Color**: `#E44D26` (optional)
-      7. Save settings - changes apply automatically
+         - **Color**: `#FF4500` (optional)
+      8. Save settings - changes apply automatically
 
       ## Browser Configuration Options
       | Option | Description |
@@ -151,10 +153,11 @@ localization:
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
-            "cdpUrl": "http://moltbot-sandbox-browser:9222",
-            "color": "#E44D26"
+          "remote": {
+            "cdpUrl": "http://openclaw-sandbox-browser:9222",
+            "color": "#FF4500"
           }
         }
       }
@@ -166,12 +169,13 @@ localization:
       2. 前往 **Settings** 頁面
       3. 找到 **Browser** 區塊並啟用 **Browser Tool**
       4. 啟用 **Attach Only** 模式
-      5. 展開 **Profiles** 區塊並點擊 **+ Add Entry**
-      6. 填入設定檔資訊：
-         - 設定檔名稱：`clawd`
+      5. 設定預設設定檔為 `remote`
+      6. 展開 **Profiles** 區塊並點擊 **+ Add Entry**
+      7. 填入設定檔資訊：
+         - 設定檔名稱：`remote`
          - **Cdp Url**：`http://moltbot-sandbox-browser:9222`
          - **Color**：`#E44D26`（選填）
-      7. 儲存設定 - 變更會自動套用
+      8. 儲存設定 - 變更會自動套用
 
       ## 瀏覽器設定選項
       | 選項 | 說明 |
@@ -234,10 +238,11 @@ localization:
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://moltbot-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -249,12 +254,13 @@ localization:
       2. 前往 **Settings** 页面
       3. 找到 **Browser** 区块并启用 **Browser Tool**
       4. 启用 **Attach Only** 模式
-      5. 展开 **Profiles** 区块并点击 **+ Add Entry**
-      6. 填入配置文件信息：
-         - 配置文件名称：`clawd`
+      5. 设置默认配置文件为 `remote`
+      6. 展开 **Profiles** 区块并点击 **+ Add Entry**
+      7. 填入配置文件信息：
+         - 配置文件名称：`remote`
          - **Cdp Url**：`http://moltbot-sandbox-browser:9222`
-         - **Color**：`#E44D26`（选填）
-      7. 保存设置 - 变更会自动应用
+         - **Color**：`#FF4500`（选填）
+      8. 保存设置 - 变更会自动应用
 
       ## 浏览器配置选项
       | 选项 | 说明 |
@@ -317,10 +323,11 @@ localization:
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://moltbot-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -332,12 +339,13 @@ localization:
       2. **Settings** ページに移動
       3. **Browser** セクションを見つけて **Browser Tool** を有効化
       4. **Attach Only** モードを有効化
-      5. **Profiles** セクションを展開して **+ Add Entry** をクリック
-      6. プロファイル設定を入力：
-         - プロファイル名：`clawd`
+      5. デフォルトプロファイルを `remote` に設定
+      6. **Profiles** セクションを展開して **+ Add Entry** をクリック
+      7. プロファイル設定を入力：
+         - プロファイル名：`remote`
          - **Cdp Url**：`http://moltbot-sandbox-browser:9222`
-         - **Color**：`#E44D26`（任意）
-      7. 設定を保存 - 変更は自動的に適用されます
+         - **Color**：`#FF4500`（任意）
+      8. 設定を保存 - 変更は自動的に適用されます
 
       ## ブラウザ設定オプション
       | オプション | 説明 |
@@ -400,10 +408,11 @@ localization:
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://moltbot-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -415,12 +424,13 @@ localization:
       2. Buka halaman **Settings**
       3. Temukan bagian **Browser** dan aktifkan **Browser Tool**
       4. Aktifkan mode **Attach Only**
-      5. Perluas bagian **Profiles** dan klik **+ Add Entry**
-      6. Isi pengaturan profil:
-         - Nama profil: `clawd`
+      5. Atur profil default ke `remote`
+      6. Perluas bagian **Profiles** dan klik **+ Add Entry**
+      7. Isi pengaturan profil:
+         - Nama profil: `remote`
          - **Cdp Url**: `http://moltbot-sandbox-browser:9222`
-         - **Color**: `#E44D26` (opsional)
-      7. Simpan pengaturan - perubahan diterapkan secara otomatis
+         - **Color**: `#FF4500` (opsional)
+      8. Simpan pengaturan - perubahan diterapkan secara otomatis
 
       ## Opsi Konfigurasi Browser
       | Opsi | Deskripsi |
@@ -483,10 +493,11 @@ localization:
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://moltbot-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -498,12 +509,13 @@ localization:
       2. Vaya a la página **Settings**
       3. Encuentre la sección **Browser** y habilite **Browser Tool**
       4. Habilite el modo **Attach Only**
-      5. Expanda la sección **Profiles** y haga clic en **+ Add Entry**
-      6. Complete la configuración del perfil:
-         - Nombre del perfil: `clawd`
+      5. Establezca el perfil predeterminado en `remote`
+      6. Expanda la sección **Profiles** y haga clic en **+ Add Entry**
+      7. Complete la configuración del perfil:
+         - Nombre del perfil: `remote`
          - **Cdp Url**: `http://moltbot-sandbox-browser:9222`
-         - **Color**: `#E44D26` (opcional)
-      7. Guarde la configuración - los cambios se aplican automáticamente
+         - **Color**: `#FF4500` (opcional)
+      8. Guarde la configuración - los cambios se aplican automáticamente
 
       ## Opciones de Configuración del Navegador
       | Opción | Descripción |

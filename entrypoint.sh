@@ -56,9 +56,21 @@ for _ in $(seq 1 50); do
   sleep 0.1
 done
 
-socat \
-  TCP-LISTEN:"${CDP_PORT}",fork,reuseaddr,bind=0.0.0.0 \
-  TCP:127.0.0.1:"${CHROME_CDP_PORT}" &
+# Use Caddy as reverse proxy to rewrite Host header to localhost
+# This bypasses Chrome's "Host header is not an IP address or localhost" check
+cat > /tmp/Caddyfile << EOF
+{
+  auto_https off
+  admin off
+}
+:${CDP_PORT} {
+  reverse_proxy 127.0.0.1:${CHROME_CDP_PORT} {
+    header_up Host 127.0.0.1
+  }
+}
+EOF
+
+caddy run --config /tmp/Caddyfile &
 
 if [[ "${ENABLE_NOVNC}" == "1" && "${HEADLESS}" != "1" ]]; then
   x11vnc -display :1 -rfbport "${VNC_PORT}" -shared -forever -nopw -localhost &
