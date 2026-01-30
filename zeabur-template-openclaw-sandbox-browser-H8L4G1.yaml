@@ -40,16 +40,20 @@ spec:
       **Option 1: Edit config file via Zeabur Files**
       1. Go to Zeabur dashboard and open your **OpenClaw** service
       2. Click **Files** to open the file manager
-      3. Navigate to `/home/node/.openclaw/openclaw.json`
+      3. Navigate to one of the following config files (depending on your version):
+         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
+         - `/home/node/.moltbot/moltbot.json` (Moltbot)
+         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
       4. Add the browser configuration (merge with existing config):
       ```json
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://openclaw-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -63,7 +67,7 @@ spec:
       4. Enable **Attach Only** mode
       5. Expand **Profiles** section and click **+ Add Entry**
       6. Fill in the profile settings:
-         - Profile name: `clawd`
+         - Profile name: `remote`
          - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (optional)
       7. Save settings - changes apply automatically
@@ -98,11 +102,11 @@ spec:
         template: PREBUILT
         spec:
           source:
-            image: ghcr.io/canyugs/openclaw-sandbox-browser:main
+            image: ghcr.io/canyugs/openclaw-sandbox-browser:38e6e28
           ports:
           - id: cdp
             port: 9222
-            type: TCP
+            type: HTTP
           healthCheck:
             type: TCP
             port: cdp
@@ -145,16 +149,20 @@ localization:
       **方式一：透過 Zeabur 檔案功能編輯設定檔**
       1. 前往 Zeabur 控制台，開啟您的 **OpenClaw** 服務
       2. 點擊**檔案**開啟檔案管理
-      3. 找到 `/home/node/.openclaw/openclaw.json`
+      3. 找到以下其中一個設定檔（依您的版本而定）：
+         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
+         - `/home/node/.moltbot/moltbot.json` (Moltbot)
+         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
       4. 加入瀏覽器設定（與現有設定合併）：
       ```json
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://openclaw-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -168,7 +176,7 @@ localization:
       4. 啟用 **Attach Only** 模式
       5. 展開 **Profiles** 區塊並點擊 **+ Add Entry**
       6. 填入設定檔資訊：
-         - 設定檔名稱：`clawd`
+         - 設定檔名稱：`remote`
          - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（選填）
       7. 儲存設定 - 變更會自動套用
@@ -228,16 +236,20 @@ localization:
       **方式一：通过 Zeabur 文件功能编辑配置文件**
       1. 前往 Zeabur 控制台，打开您的 **OpenClaw** 服务
       2. 点击**文件**打开文件管理
-      3. 找到 `/home/node/.openclaw/openclaw.json`
+      3. 找到以下其中一个配置文件（取决于您的版本）：
+         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
+         - `/home/node/.moltbot/moltbot.json` (Moltbot)
+         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
       4. 添加浏览器配置（与现有配置合并）：
       ```json
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://openclaw-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -251,7 +263,7 @@ localization:
       4. 启用 **Attach Only** 模式
       5. 展开 **Profiles** 区块并点击 **+ Add Entry**
       6. 填入配置文件信息：
-         - 配置文件名称：`clawd`
+         - 配置文件名称：`remote`
          - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（选填）
       7. 保存设置 - 变更会自动应用
@@ -311,16 +323,20 @@ localization:
       **方法1：Zeabur ファイル機能で設定ファイルを編集**
       1. Zeabur ダッシュボードで **OpenClaw** サービスを開く
       2. **ファイル**をクリックしてファイルマネージャーを開く
-      3. `/home/node/.openclaw/openclaw.json` を見つける
+      3. 以下のいずれかの設定ファイルを見つける（バージョンにより異なる）：
+         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
+         - `/home/node/.moltbot/moltbot.json` (Moltbot)
+         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
       4. ブラウザ設定を追加（既存の設定とマージ）：
       ```json
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://openclaw-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -334,7 +350,7 @@ localization:
       4. **Attach Only** モードを有効化
       5. **Profiles** セクションを展開して **+ Add Entry** をクリック
       6. プロファイル設定を入力：
-         - プロファイル名：`clawd`
+         - プロファイル名：`remote`
          - **Cdp Url**：`http://openclaw-sandbox-browser:9222`
          - **Color**：`#E44D26`（任意）
       7. 設定を保存 - 変更は自動的に適用されます
@@ -394,16 +410,20 @@ localization:
       **Opsi 1: Edit file konfigurasi via Zeabur Files**
       1. Buka dashboard Zeabur dan buka layanan **OpenClaw** Anda
       2. Klik **Files** untuk membuka file manager
-      3. Temukan `/home/node/.openclaw/openclaw.json`
+      3. Temukan salah satu file konfigurasi berikut (tergantung versi Anda):
+         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
+         - `/home/node/.moltbot/moltbot.json` (Moltbot)
+         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
       4. Tambahkan konfigurasi browser (gabungkan dengan konfigurasi yang ada):
       ```json
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://openclaw-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -417,7 +437,7 @@ localization:
       4. Aktifkan mode **Attach Only**
       5. Perluas bagian **Profiles** dan klik **+ Add Entry**
       6. Isi pengaturan profil:
-         - Nama profil: `clawd`
+         - Nama profil: `remote`
          - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (opsional)
       7. Simpan pengaturan - perubahan diterapkan secara otomatis
@@ -477,16 +497,20 @@ localization:
       **Opción 1: Editar archivo de configuración via Zeabur Files**
       1. Vaya al panel de Zeabur y abra su servicio **OpenClaw**
       2. Haga clic en **Files** para abrir el administrador de archivos
-      3. Navegue a `/home/node/.openclaw/openclaw.json`
+      3. Navegue a uno de los siguientes archivos de configuración (según su versión):
+         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
+         - `/home/node/.moltbot/moltbot.json` (Moltbot)
+         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
       4. Agregue la configuración del navegador (combine con la configuración existente):
       ```json
       "browser": {
         "enabled": true,
         "attachOnly": true,
+        "defaultProfile": "remote",
         "profiles": {
-          "clawd": {
+          "remote": {
             "cdpUrl": "http://openclaw-sandbox-browser:9222",
-            "color": "#E44D26"
+            "color": "#FF4500"
           }
         }
       }
@@ -500,7 +524,7 @@ localization:
       4. Habilite el modo **Attach Only**
       5. Expanda la sección **Profiles** y haga clic en **+ Add Entry**
       6. Complete la configuración del perfil:
-         - Nombre del perfil: `clawd`
+         - Nombre del perfil: `remote`
          - **Cdp Url**: `http://openclaw-sandbox-browser:9222`
          - **Color**: `#E44D26` (opcional)
       7. Guarde la configuración - los cambios se aplican automáticamente
