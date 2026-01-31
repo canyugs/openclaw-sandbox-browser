@@ -37,14 +37,8 @@ spec:
 
       ## Configuration for OpenClaw
 
-      **Option 1: Edit config file via Zeabur Files**
-      1. Go to Zeabur dashboard and open your **OpenClaw** service
-      2. Click **Files** to open the file manager
-      3. Navigate to one of the following config files (depending on your version):
-         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
-         - `/home/node/.moltbot/moltbot.json` (Moltbot)
-         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
-      4. Add the browser configuration (merge with existing config):
+      **Option 1: Paste config to OpenClaw**
+      Copy the following configuration and paste it to OpenClaw chat, asking it to update your config file:
       ```json
       "browser": {
         "enabled": true,
@@ -58,7 +52,7 @@ spec:
         }
       }
       ```
-      5. Save the file and restart the OpenClaw service
+      Example prompt: "Please add this browser configuration to my openclaw.json file"
 
       **Option 2: OpenClaw Web UI**
       1. Open OpenClaw Web UI (click the domain link in Zeabur dashboard)
@@ -109,7 +103,7 @@ spec:
         template: PREBUILT
         spec:
           source:
-            image: ghcr.io/canyugs/openclaw-sandbox-browser:38e6e28
+            image: ghcr.io/canyugs/openclaw-sandbox-browser:edcc8e5
           ports:
           - id: cdp
             port: 9222
@@ -153,14 +147,8 @@ localization:
 
       ## OpenClaw 設定
 
-      **方式一：透過 Zeabur 檔案功能編輯設定檔**
-      1. 前往 Zeabur 控制台，開啟您的 **OpenClaw** 服務
-      2. 點擊**檔案**開啟檔案管理
-      3. 找到以下其中一個設定檔（依您的版本而定）：
-         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
-         - `/home/node/.moltbot/moltbot.json` (Moltbot)
-         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
-      4. 加入瀏覽器設定（與現有設定合併）：
+      **方式一：將設定貼給 OpenClaw**
+      複製以下設定並貼到 OpenClaw 對話中，請它幫您更新設定檔：
       ```json
       "browser": {
         "enabled": true,
@@ -174,7 +162,7 @@ localization:
         }
       }
       ```
-      5. 儲存檔案並重新啟動 OpenClaw 服務
+      範例提示詞："請將這個瀏覽器設定加到我的 openclaw.json 檔案中"
 
       **方式二：OpenClaw Web UI**
       1. 開啟 OpenClaw Web UI（點擊 Zeabur 控制台中的網域連結）
@@ -247,14 +235,8 @@ localization:
 
       ## OpenClaw 配置
 
-      **方式一：通过 Zeabur 文件功能编辑配置文件**
-      1. 前往 Zeabur 控制台，打开您的 **OpenClaw** 服务
-      2. 点击**文件**打开文件管理
-      3. 找到以下其中一个配置文件（取决于您的版本）：
-         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
-         - `/home/node/.moltbot/moltbot.json` (Moltbot)
-         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
-      4. 添加浏览器配置（与现有配置合并）：
+      **方式一：将配置贴给 OpenClaw**
+      复制以下配置并贴到 OpenClaw 对话中，请它帮您更新配置文件：
       ```json
       "browser": {
         "enabled": true,
@@ -268,7 +250,7 @@ localization:
         }
       }
       ```
-      5. 保存文件并重新启动 OpenClaw 服务
+      示例提示词："请将这个浏览器配置添加到我的 openclaw.json 文件中"
 
       **方式二：OpenClaw Web UI**
       1. 打开 OpenClaw Web UI（点击 Zeabur 控制台中的域名链接）
@@ -341,14 +323,8 @@ localization:
 
       ## OpenClaw 設定
 
-      **方法1：Zeabur ファイル機能で設定ファイルを編集**
-      1. Zeabur ダッシュボードで **OpenClaw** サービスを開く
-      2. **ファイル**をクリックしてファイルマネージャーを開く
-      3. 以下のいずれかの設定ファイルを見つける（バージョンにより異なる）：
-         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
-         - `/home/node/.moltbot/moltbot.json` (Moltbot)
-         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
-      4. ブラウザ設定を追加（既存の設定とマージ）：
+      **方法1：設定を OpenClaw に貼り付け**
+      以下の設定をコピーして OpenClaw のチャットに貼り付け、設定ファイルの更新を依頼してください：
       ```json
       "browser": {
         "enabled": true,
@@ -362,7 +338,7 @@ localization:
         }
       }
       ```
-      5. ファイルを保存して OpenClaw サービスを再起動
+      プロンプト例：「このブラウザ設定を私の openclaw.json ファイルに追加してください」
 
       **方法2：OpenClaw Web UI**
       1. OpenClaw Web UI を開く（Zeabur ダッシュボードでドメインリンクをクリック）
@@ -435,14 +411,8 @@ localization:
 
       ## Konfigurasi untuk OpenClaw
 
-      **Opsi 1: Edit file konfigurasi via Zeabur Files**
-      1. Buka dashboard Zeabur dan buka layanan **OpenClaw** Anda
-      2. Klik **Files** untuk membuka file manager
-      3. Temukan salah satu file konfigurasi berikut (tergantung versi Anda):
-         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
-         - `/home/node/.moltbot/moltbot.json` (Moltbot)
-         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
-      4. Tambahkan konfigurasi browser (gabungkan dengan konfigurasi yang ada):
+      **Opsi 1: Tempelkan konfigurasi ke OpenClaw**
+      Salin konfigurasi berikut dan tempelkan ke chat OpenClaw, minta untuk memperbarui file konfigurasi Anda:
       ```json
       "browser": {
         "enabled": true,
@@ -456,7 +426,7 @@ localization:
         }
       }
       ```
-      5. Simpan file dan restart layanan OpenClaw
+      Contoh prompt: "Tolong tambahkan konfigurasi browser ini ke file openclaw.json saya"
 
       **Opsi 2: OpenClaw Web UI**
       1. Buka OpenClaw Web UI (klik tautan domain di dashboard Zeabur)
@@ -529,14 +499,8 @@ localization:
 
       ## Configuración para OpenClaw
 
-      **Opción 1: Editar archivo de configuración via Zeabur Files**
-      1. Vaya al panel de Zeabur y abra su servicio **OpenClaw**
-      2. Haga clic en **Files** para abrir el administrador de archivos
-      3. Navegue a uno de los siguientes archivos de configuración (según su versión):
-         - `/home/node/.openclaw/openclaw.json` (OpenClaw)
-         - `/home/node/.moltbot/moltbot.json` (Moltbot)
-         - `/home/node/.clawdbot/clawdbot.json` (Clawdbot)
-      4. Agregue la configuración del navegador (combine con la configuración existente):
+      **Opción 1: Pegar configuración a OpenClaw**
+      Copie la siguiente configuración y péguela en el chat de OpenClaw, pidiéndole que actualice su archivo de configuración:
       ```json
       "browser": {
         "enabled": true,
@@ -550,7 +514,7 @@ localization:
         }
       }
       ```
-      5. Guarde el archivo y reinicie el servicio OpenClaw
+      Ejemplo de prompt: "Por favor agregue esta configuración del navegador a mi archivo openclaw.json"
 
       **Opción 2: OpenClaw Web UI**
       1. Abra OpenClaw Web UI (haga clic en el enlace del dominio en el panel de Zeabur)
