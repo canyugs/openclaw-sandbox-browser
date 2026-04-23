@@ -103,7 +103,7 @@ spec:
         template: PREBUILT
         spec:
           source:
-            image: ghcr.io/canyugs/openclaw-sandbox-browser:edcc8e5
+            image: ghcr.io/canyugs/openclaw-sandbox-browser:d1f0a23
           ports:
           - id: cdp
             port: 9222
