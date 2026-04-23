@@ -10,7 +10,6 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     bash \
     ca-certificates \
-    caddy \
     chromium \
     curl \
     fonts-liberation \
@@ -27,6 +26,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /usr/local/bin/openclaw-sandbox-browser
+COPY cdp_proxy.py /usr/local/bin/cdp_proxy.py
 RUN chmod +x /usr/local/bin/openclaw-sandbox-browser
 
 EXPOSE 9222 5900 6080

@@ -12,6 +12,9 @@ VNC_PORT="${OPENCLAW_BROWSER_VNC_PORT:-${MOLTBOT_BROWSER_VNC_PORT:-${CLAWDBOT_BR
 NOVNC_PORT="${OPENCLAW_BROWSER_NOVNC_PORT:-${MOLTBOT_BROWSER_NOVNC_PORT:-${CLAWDBOT_BROWSER_NOVNC_PORT:-6080}}}"
 ENABLE_NOVNC="${OPENCLAW_BROWSER_ENABLE_NOVNC:-${MOLTBOT_BROWSER_ENABLE_NOVNC:-${CLAWDBOT_BROWSER_ENABLE_NOVNC:-1}}}"
 HEADLESS="${OPENCLAW_BROWSER_HEADLESS:-${MOLTBOT_BROWSER_HEADLESS:-${CLAWDBOT_BROWSER_HEADLESS:-0}}}"
+# Hostname that clients (e.g. OpenClaw in another container) use to reach this service.
+# Defaults to the Zeabur internal DNS name; override with OPENCLAW_BROWSER_PUBLIC_HOST if needed.
+PUBLIC_HOST="${OPENCLAW_BROWSER_PUBLIC_HOST:-openclaw-sandbox-browser}"
 
 mkdir -p "${HOME}" "${HOME}/.chrome" "${XDG_CONFIG_HOME}" "${XDG_CACHE_HOME}"
 
@@ -56,21 +59,11 @@ for _ in $(seq 1 50); do
   sleep 0.1
 done
 
-# Use Caddy as reverse proxy to rewrite Host header to localhost
-# This bypasses Chrome's "Host header is not an IP address or localhost" check
-cat > /tmp/Caddyfile << EOF
-{
-  auto_https off
-  admin off
-}
-:${CDP_PORT} {
-  reverse_proxy 127.0.0.1:${CHROME_CDP_PORT} {
-    header_up Host 127.0.0.1
-  }
-}
-EOF
-
-caddy run --config /tmp/Caddyfile &
+# Python CDP proxy: forwards requests to Chrome and rewrites ws://127.0.0.1 URLs
+# in JSON responses so that clients in other containers get a reachable WebSocket URL.
+CDP_PORT="${CDP_PORT}" CHROME_CDP_INTERNAL_PORT="${CHROME_CDP_PORT}" \
+  OPENCLAW_BROWSER_PUBLIC_HOST="${PUBLIC_HOST}" \
+  python3 /usr/local/bin/cdp_proxy.py &
 
 if [[ "${ENABLE_NOVNC}" == "1" && "${HEADLESS}" != "1" ]]; then
   x11vnc -display :1 -rfbport "${VNC_PORT}" -shared -forever -nopw -localhost &
